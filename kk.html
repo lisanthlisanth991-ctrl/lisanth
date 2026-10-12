@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Colorful Quiz</title>
+    <link rel="stylesheet" href="kk.css">
+    <script src="kk.js" defer></script>
+</head>
+<body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <header class="navbar">
+        <h2>💡 Quiz<span>Master</span></h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <section class="card welcome" id="home">
+            <div class="emoji">🌟</div>
+            <p class="tag">WELCOME TO THE FUN ZONE</p>
+            <h1>Welcome to<br><span>QuizMaster!</span></h1>
+            <p class="description">
+                Test your knowledge, challenge yourself and have fun!
+            </p>
+
+            <div class="stats">
+                <div class="stat pink">
+                    <span>❓</span>
+                    <strong>10</strong>
+                    <small>Questions</small>
+                </div>
+                <div class="stat blue">
+                    <span>⏱️</span>
+                    <strong>15s</strong>
+                    <small>Per Question</small>
+                </div>
+                <div class="stat green">
+                    <span>🏆</span>
+                    <strong>100</strong>
+                    <small>Max Points</small>
+                </div>
+            </div>
+
+            <button class="primary" id="startBtn">▶ Start Quiz</button>
+            <p class="goodluck">✨ Ready to shine?</p>
+        </section>
+
+        <section class="card quiz" id="quiz">
+            <div class="quiz-head">
+                <strong id="counter">Question 1 / 10</strong>
+                <div class="timer" id="timer">15s</div>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <span class="category">GENERAL KNOWLEDGE</span>
+            <h2 id="question">Your question will appear here.</h2>
+
+            <div id="options" class="options"></div>
+            <p id="feedback" aria-live="polite"></p>
+
+            <button class="primary" id="nextBtn" disabled>
+                Next Question →
+            </button>
+        </section>
+
+        <section class="card result hidden" id="result">
+            <div class="emoji">🏆</div>
+            <p class="tag">YOUR PERFORMANCE</p>
+            <h1 id="resultTitle">Quiz Completed!</h1>
+            <p class="description">Great job! Here is your result.</p>
+
+            <div class="score-circle">
+                <strong id="score">0 / 100</strong>
+                <span id="percentage">0% score</span>
+            </div>
+
+            <div class="result-stats">
+                <div>✅ Correct <strong id="correct">0</strong></div>
+                <div>❌ Incorrect <strong id="wrong">0</strong></div>
+            </div>
+
+            <button class="primary" id="restartBtn">🔄 Play Again</button>
+            <button class="secondary" id="homeBtn">🏠 Back to Home</button>
+        </section>
+    </main>
+
+    <footer id="about">
+        Made with 💜 by <strong>Lisanth</strong> | QuizMaster © 2026
+    </footer>
+</body>
+</html>
